@@ -1,0 +1,1 @@
+function show(a){var b=" abierto",c=document.getElementsByClassName("c"+a)[0];/^catalogo c\d$/.test(c.className)?c.className+=b:c.className=c.className.replace(b,"")}

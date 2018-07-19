@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Ecuestria - Tu escuela de hípica</title>
+<meta charset=UTF-8>
+<meta name=viewport content="width=device-width, initial-scale=1.0">
+<link rel=stylesheet href=css/style.css />
+<link rel=stylesheet href=css/formulario.css />
+<script type=text/javascript src=js/script.js></script>
+<script type=text/javascript src=js/formulario.js></script>
+</head>
+<body>
+<div id=wrapper>
+<header class=main>
+<a href=index.html class=cabeza> <h1>Ecuestria</h1>
+<p>Tu escuela de hípica</p>
+<img src=img/logo.png alt=Logo title=Ecuestria /></a>
+<div id=buscador>
+<form action=http://www.google.com>
+<input type=text value placeholder=Buscar... />
+<input type=submit value=buscar />
+</form></div>
+</header>
+<nav>
+<ul>
+<li><a href=index.html title=Home>Home</a></li><li><a href=catalogo.html title=Catálogo>Actividades</a></li><li><a href=galeria.html title=Galería>Galería</a></li><li><a href=formulario.html title=Contacta class=activo>Contacta</a></li>
+</ul>
+</nav>
+<main>
+<section>
+<article id=migas>
+<a href=index.html title=home>home</a> > <a href=formulario.html title=Contacta>contacta</a>
+</article>
+<article>
+<h1>Contacta con nosotros</h1><br>
+<p>Por favor, introduzca sus datos personales y el motivo de su consulta para que podamos atender su petición .</p><br>
+<form name=contacto id=contacto method=POST action=datos_enviados.html oninput=activarTerminos() onsubmit="return validar()">
+<table border=0>
+<tbody>
+<tr>
+<td class=col_izq>Nombre <span class=asterisco>(*)</span></td>
+<td><input type=text name=nombre id=nombre value size=18 placeholder=Alfonso required/></td>
+</tr>
+<tr>
+<td class=col_izq>Apellido 1 <span class=asterisco>(*)</span></td>
+<td><input type=text name=apellido1 id=apellido1 value size=18 placeholder=Serrano required/></td>
+</tr>
+<tr>
+<td class=col_izq>Apellido 2 <span class=asterisco>(*)</span></td>
+<td><input type=text name=apellido2 id=apellido2 value size=18 placeholder=Gutiérrez required/></td>
+</tr>
+<tr>
+<td class=col_izq>Email <span class=asterisco>(*)</span></td>
+<td><input type=email name=email id=email value size=18 placeholder=ejemplo@ejem.ejm required/></td>
+</tr>
+<tr>
+<td class=col_izq>Teléfono fijo</td>
+<td><input type=text name=fijo id=fijo value size=18 maxlength=9 placeholder=916542348 /></td>
+</tr>
+<tr>
+<td class=col_izq>Teléfono móvil <span class=asterisco>(*)</span></td>
+<td><input type=text name=movil id=movil value size=18 maxlength=9 placeholder=666434876 required/></td>
+</tr>
+<tr>
+<td class=col_izq>Descripción <span class=asterisco>(*)</span></td>
+<td><textarea name=descripcion id=descripcion rows=4 cols=19 placeholder="Me gustaria recibir informacion sobre..." required></textarea></td>
+</tr>
+<tr>
+<td class=col_izq>Asunto <span class=asterisco>(*)</span></td>
+<td>
+<select name=asunto id=asunto required>
+<option></option>
+<option>Acerca de actividades</option>
+<option>Sobre los precios</option>
+<option>Cómo llegar</option>
+<option>Otros</option>
+</select>
+</td>
+</tr>
+<tr>
+<td colspan=2>
+<input type=checkbox name=terminos id=terminos value onchange=activarEnvio() required disabled/>
+<label for=terminos>Acepto los <a href=# title="Terminos Licencia" onClick=verTerminos()>Términos y Condiciones</a><br>y la <a href=# title="Terminos Licencia" onClick=verPolitica()>Politica y Privacidad de datos</a></label>
+</td>
+</tr>
+<tr>
+<td colspan=2 class=asterisco style=text-align:center> Los campos señalados son obligatorios (*)</td>
+</tr>
+<tr id=error>
+<td colspan=2><div>Algúno de los campos es incorrecto</div></td>
+</tr>
+<tr style=text-align:center>
+<td colspan=2><input type=submit id=enviar value=Enviar disabled /> <input type=reset id=reset value=Limpiar /></td>
+</tr>
+</tbody>
+</table>
+</form>
+</article>
+</section>
+</main>
+<footer class=main>
+<a href=formulario.html title=Contacto>Contacto</a> - <a href=# title="Terminos Licencia" onClick=verTerminos()>Términos Licencia</a> - <a href=# title=Ayuda onClick="ayuda('actividades')">Ayuda</a> - <a href=donde_estamos.html title=Mapa>Donde Estamos</a> - <a href=mapa_navegacion.html title="Mapa de Navegacion">Mapa Web</a><br>
+© Alejandro Montoya - Cristian Castaño - Diego Rodríguez
+</footer>
+</div>
+</body>
+</html>
